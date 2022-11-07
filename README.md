@@ -64,9 +64,9 @@ Demand amount will depend on the store size, the model tell us that lager the st
 ## Repository Structure
 
 ```
-├── README.md                           <- The top-level README for reviewers of this project
-├── Capstone_Walmart.ipynb              <- Narrative documentation of recommendations in Jupyter notebook
-├── walmart_presentation.pptx           <- PDF version of project presentation
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+├── README.md                    <- The top-level README for reviewers of this project
+├── Capstone_Walmart.ipynb       <- Narrative documentation of recommendations in Jupyter notebook
+├── walmart_presentation.pptx    <- PDF version of project presentation
+├── data                         <- Both sourced externally and generated from code
+└── images                       <- Both sourced externally and generated from code
 ```
