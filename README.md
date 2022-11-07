@@ -6,36 +6,36 @@
 
 ## Project Overview & Business Problem
 
-In this project I gathered csv file from kaggle only for educational purpose. Walmart has been running out of stock during busy periods recently and are looking for a way to predict future sales in order to maintain appropriate levels of stock.
+In this project I researched and found my dataset as a csv file from Kaggle, only for educational purposes. 
+
+Walmart has been running out of stock during busy periods recently and are looking for a way to predict future sales in order to maintain appropriate levels of stock.
 
 ## Data Understanding
 
-Walmart.csv file contains 6435 rows and 8 columns for the period of 2010-2012. Analysing the data we can say that it has 45 stores, a price in relation to weekly sales, holiday days, temperature, fuel price, Consumer price index (CPI) and unemployment. 
+Walmart.csv file contains 6,435 rows and 8 columns for the period of 2010-2012. Analysing the data we can say that it has 45 stores, a price in relation to weekly sales, holiday days, temperature, fuel price, Consumer price index (CPI) and unemployment. 
 
 Columns:
 
-  * Store         45 number of stores
-  * Date          day-mont-year of sale
+  * Store         45 stores
+  * Date          day-month-year of sale
   * Weekly_Sales  sales in given stores
-  * Holiday_Flag  0 for no holyday day | 1 for holiday day
+  * Holiday_Flag  0 for no holiday day | 1 for holiday day
   * Temperature   ℉ in days of sales
-  * Fuel_price    Fuel cost on day sales
+  * Fuel_price    Fuel cost on days of sales
   * CPI           Consumer price index
-  * Unemployment  Unemplyment rate
-  
+  * Unemployment  Unemployment rate
   
 ![graph1](./Images/hist_gram.png)  
-
 
 ## Data Cleaning
   
 * I started checking for missing and unique values in each column. 
-* Proceded to convert date into weeks, months and year.
-* Created a segmentation of the data by Quarters for better understanding.
-* Found in weekly sales, temperature and unemployment outliers, that performinng IQR Triming and Capping method got removed.
-* Created dummie variable for categorical data.
-* Perform Log Transformation futher on in Weekly sales, temperature, fuel price, cpi and unemployment.
-* Also perform stadarization of the data.
+* Proceeded to convert date into weeks, months and year.
+* Created a segmentation of the data by Quarters for better usage.
+* Outliers found in weekly sales, temperature and unemployment, that performinng the IQR Trimming and Capping method got removed.
+* Created dummie variables for categorical data.
+* Performed Log Transformations further on in Weekly sales, temperature, fuel price, CPI and unemployment.
+* Also performed standarisation of the data.
 
 ![graph1](./Images/og_q.png)
 ![graph1](./Images/sales_vs_store.png)
@@ -44,22 +44,25 @@ Columns:
 
 ## Modeling
 
-First 4 models where in great succes just in terms of r-squared value performing till 0.977, mse in cross validation where sloly reduce but not enough to provide a satifactory result. I went back to analyse the data for further analysis and created new variables for future models mainly base on categorization of stores and segmentation of weekly sales by quarter.
+The first 4 models were a great success in terms of the r-squared value being 0.977. The mse in cross validation were slowly reduced, but not enough to provide a satifactory result. I further analysed and created new variables for future models mainly based on categorisation of stores and segmentation of weekly sales by quarter.
+
+![graph1](./Images/model_4_plot.png)
+![graph1](./Images/rsquare_results.png)
+
+## Summary
+
+The last model provided the best fit for linear regression with an R-squared value of 0.805, meaning that it represents 80.5% of the data, validating it with a T-test provided a Mean Squared Error value of 0.0377 and a Cross Validation result of 0.087.
 
 ![graph1](./Images/modelq3result.png)
 ![graph1](./Images/modelq3.png)
 
-## Summary
-
-Last Model provided the best fit for linear regression with an R-squared value of 0.805, meaning that it represents 80.5% of the data, validating it with T-test provided a Mean Squared Error value: 0.0377 and Cross Validation result: 0.087.
-
 ## Recommendation
 
-Using last model, demand will increase quarterly and will be significantly higher during the last quarter of the year, store type format for small, medium and large stores will prepared Walmart for future demand and stock supply.
+Using the last model, we can see that demand will increase quarterly and will be significantly higher during the last quarter of the year. Categorising stores into small, medium and large will help prepare Walmart for future demand and stock supply.
 
 ![graph1](./Images/q_type.png)
 
-Demand amount will depend on the store size, the model tell us that lager the store the higher the demand and prepared for holiday days as they are a factor that will increase demand.
+Demand amount will depend on the store size, the model tell us that the larger the store, the higher the demand. It also shows Walmart should be prepared for holiday days as they are a factor that will increase demand.
 
 ## Repository Structure
 
